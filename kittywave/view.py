@@ -93,6 +93,7 @@ def draw_viewer(stdscr, signals, event_map, timestamps):
         "",
         " NAVIGATION:",
         "  l / r  : Scroll timeline Left / Right",
+        "  i / o  : Zoom in or out",
         "  , / .  : Fast Scroll Left / Right (10x zoom)",
         "  g      : Go To specific Time (nanoseconds)",
         "  u / d  : Select Signal Wire (Up / Down)",
@@ -163,9 +164,13 @@ def draw_viewer(stdscr, signals, event_map, timestamps):
                 color = curses.color_pair(color_map[sig_id])
                 
                 wave_str = []
-                high_char = '█' if theme == 'block' else '¯'
-                low_char = ' ' if theme == 'block' else '_'
-                
+                                if theme == 'block':
+                    high_char, low_char = '█', ' '
+                elif theme == 'dots':
+                    high_char, low_char = '•', '·'
+                else:  # classic
+                    high_char, low_char = '¯', '_'
+                                                                        
                 for x in range(wave_width):
                     t = time_offset + (x * zoom)
                     raw_val = get_val_at(sig_id, t, event_map, timestamps)
@@ -211,7 +216,9 @@ def draw_viewer(stdscr, signals, event_map, timestamps):
         elif key == ord('w'):
             marker_a, marker_b = None, None
         elif key == ord('t'):
-            theme = 'block' if theme == 'classic' else 'classic'
+            if theme == 'classic': theme = 'block'
+            elif theme == 'block': theme = 'dots'
+            else: theme = 'classic'
         elif key == ord('b'):
             bookmark_time = cursor_time
         elif key == ord('v'):
