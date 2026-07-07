@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kittywave"
+version = "1.0.0"
+description = "Your awesome waveform tool!"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+authors = [
+    {name = "stefand-0", email = "stefandragan95@gmail.com"}
+]
+
+[project.scripts]
+kittywave = "kittywave.view:main"
