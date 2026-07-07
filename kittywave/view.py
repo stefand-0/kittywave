@@ -164,7 +164,8 @@ def draw_viewer(stdscr, signals, event_map, timestamps):
                 color = curses.color_pair(color_map[sig_id])
                 
                 wave_str = []
-                                if theme == 'block':
+                                     
+                if theme == 'block':
                     high_char, low_char = '█', ' '
                 elif theme == 'dots':
                     high_char, low_char = '•', '·'
