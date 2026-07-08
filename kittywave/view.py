@@ -169,7 +169,8 @@ def draw_viewer(stdscr, signals, event_map, timestamps):
             stdscr.addstr(h-1, 0, " 'z':Back | 'x':Radix | 'w':Reset Markers | 'h':Help "[:w-1], curses.A_REVERSE)
 
         else:
-            status = f" T:{cursor_time}ns | RADIX:{radix.upper()} | Δ:{delta}ns | Bmk:{bookmark_time if bookmark_time is not None else '-'}"
+            freq = (1e9 / delta) if delta > 0 else 0
+            status = f" T:{cursor_time}ns | RADIX:{radix.upper()} | Δ:{delta}ns ({freq:,.0f}Hz) | Bmk:{bookmark_time if bookmark_time is not None else '-'}"
             stdscr.addstr(0, 0, status[:w-1], curses.A_REVERSE)
 
             max_visible_signals = h - 5
