@@ -19,6 +19,6 @@ This changelog starts from version 1.0.6.
 
 - Documentation for scrolling in both viewer and value menus
 
-# 1.2.9
+# 1.3.0
 
 - Added a frequency meter when calculating the difference between Marker A and B.
