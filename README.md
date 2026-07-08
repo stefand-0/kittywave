@@ -1,6 +1,6 @@
 # KittyWave:
 
-A delightful, ultra-lightweight, terminal-based Value Change Dump (VCD) waveform viewer. Built specifically for digital designers, hardware enthusiasts, and computer engineering students who love working directly inside minimal environments like **Termux**, remote **SSH sessions**, or local linux terminals.
+A delightful, ultra-lightweight, terminal-based Value Change Dump (VCD) waveform viewer. Built specifically for begginers, and for digital designers, hardware enthusiasts, and computer engineering students who love working directly inside minimal environments like **Termux**, remote **SSH sessions**, or local linux terminals.
 
 No bulky GUI, no heavy dependencies, just your terminal, standard Python curses, and beautiful waveforms. 
 
