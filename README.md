@@ -7,7 +7,7 @@ No bulky GUI, no heavy dependencies, just your terminal, standard Python curses,
 ### 📸 Screenshots
 
 <p align="center">
-  <img src="Screenshot_20260708_095541_Termux.jpg" width="320" alt="KittyWave UI 1" />
+  <img src="screenshots/Screenshot_20260708_095541_Termux.jpg" width="320" alt="KittyWave UI 1" />
   <img src="screenshots/Screenshot_20260707_150155_Termux.jpg" width="320" alt="KittyWave UI 2" />
 </p>
 
